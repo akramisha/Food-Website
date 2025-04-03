@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now - GoldenBite</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="order-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Golden<span>Bite</span></h1>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#menu">Menu</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#specials">Specials</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="theme-toggle">
+                    <input type="checkbox" id="theme-toggle-checkbox">
+                    <label for="theme-toggle-checkbox" class="toggle-label">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <div class="toggle-ball"></div>
+                    </label>
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#menu">Menu</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#specials">Specials</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span>View Cart</span>
+        </div>
+    </div>
+
+    <!-- Order Page Content -->
+    <div class="order-page">
+        <div class="container">
+            <div class="order-header">
+                <h1>Order <span>Online</span></h1>
+                <p>Select your favorite items and have them delivered to your doorstep</p>
+            </div>
+
+            <div class="order-content">
+                <!-- Menu Section -->
+                <div class="menu-section">
+                    <div class="menu-categories">
+                        <button class="category-btn active" data-category="all">All</button>
+                        <button class="category-btn" data-category="burgers">Burgers</button>
+                        <button class="category-btn" data-category="pizza">Pizza</button>
+                        <button class="category-btn" data-category="sides">Sides</button>
+                        <button class="category-btn" data-category="drinks">Drinks</button>
+                    </div>
+
+                    <div class="menu-items-container">
+                        <!-- Burgers -->
+                        <div class="menu-item" data-category="burgers">
+                            <div class="item-img">
+                                <img src="images/classy.jpg" alt="Classic Burger">
+                            </div>
+                            <div class="item-content">
+                                <h3>Classic Burger</h3>
+                                <p>Juicy beef patty with fresh lettuce, tomato, and our special sauce</p>
+                                <div class="item-footer">
+                                    <span class="price">$8.99</span>
+                                    <div class="quantity-controls">
+                                        <button class="quantity-btn minus">-</button>
+                                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                        <button class="quantity-btn plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-id="1" data-name="Classic Burger" data-price="8.99">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-category="burgers">
+                            <div class="item-img">
+                                <img src="images/cheesee.jpg" alt="Cheese Burger">
+                            </div>
+                            <div class="item-content">
+                                <h3>Cheese Burger</h3>
+                                <p>Our classic burger topped with melted cheddar cheese</p>
+                                <div class="item-footer">
+                                    <span class="price">$9.99</span>
+                                    <div class="quantity-controls">
+                                        <button class="quantity-btn minus">-</button>
+                                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                        <button class="quantity-btn plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-id="2" data-name="Cheese Burger" data-price="9.99">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-category="burgers">
+                            <div class="item-img">
+                                <img src="images/double.jpg" alt="Double Burger">
+                            </div>
+                            <div class="item-content">
+                                <h3>Double Burger</h3>
+                                <p>Two beef patties with double cheese, bacon, and all the fixings</p>
+                                <div class="item-footer">
+                                    <span class="price">$12.99</span>
+                                    <div class="quantity-controls">
+                                        <button class="quantity-btn minus">-</button>
+                                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                        <button class="quantity-btn plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-id="3" data-name="Double Burger" data-price="12.99">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pizza -->
+                        <div class="menu-item" data-category="pizza">
+                            <div class="item-img">
+                                <img src="images/pepperoni pizza.jpg" alt="Pepperoni Pizza">
+                            </div>
+                            <div class="item-content">
+                                <h3>Pepperoni Pizza</h3>
+                                <p>Classic pizza with tomato sauce, mozzarella, and pepperoni</p>
+                                <div class="item-footer">
+                                    <span class="price">$12.99</span>
+                                    <div class="quantity-controls">
+                                        <button class="quantity-btn minus">-</button>
+                                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                        <button class="quantity-btn plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-id="4" data-name="Pepperoni Pizza" data-price="12.99">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-category="pizza">
+                            <div class="item-img">
+                                <img src="images/vegie pizza.jpg" alt="Veggie Pizza">
+                            </div>
+                            <div class="item-content">
+                                <h3>Veggie Pizza</h3>
+                                <p>Fresh vegetables on a crispy crust with tomato sauce and cheese</p>
+                                <div class="item-footer">
+                                    <span class="price">$11.99</span>
+                                    <div class="quantity-controls">
+                                        <button class="quantity-btn minus">-</button>
+                                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                        <button class="quantity-btn plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-id="5" data-name="Veggie Pizza" data-price="11.99">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sides -->
+                        <div class="menu-item" data-category="sides">
+                            <div class="item-img">
+                                <img src="images/fries.jpg" alt="French Fries">
+                            </div>
+                            <div class="item-content">
+                                <h3>French Fries</h3>
+                                <p>Crispy golden fries seasoned to perfection</p>
+                                <div class="item-footer">
+                                    <span class="price">$3.99</span>
+                                    <div class="quantity-controls">
+                                        <button class="quantity-btn minus">-</button>
+                                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                        <button class="quantity-btn plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-id="6" data-name="French Fries" data-price="3.99">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-category="sides">
+                            <div class="item-img">
+                                <img src="images/onion.jpg" alt="Onion Rings">
+                            </div>
+                            <div class="item-content">
+                                <h3>Onion Rings</h3>
+                                <p>Crispy battered onion rings served with dipping sauce</p>
+                                <div class="item-footer">
+                                    <span class="price">$4.99</span>
+                                    <div class="quantity-controls">
+                                        <button class="quantity-btn minus">-</button>
+                                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                        <button class="quantity-btn plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-id="7" data-name="Onion Rings" data-price="4.99">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Drinks -->
+                        <div class="menu-item" data-category="drinks">
+                            <div class="item-img">
+                                <img src="images/choco.jpg" alt="Milkshake">
+                            </div>
+                            <div class="item-content">
+                                <h3>Chocolate Milkshake</h3>
+                                <p>Rich and creamy chocolate milkshake topped with whipped cream</p>
+                                <div class="item-footer">
+                                    <span class="price">$4.99</span>
+                                    <div class="quantity-controls">
+                                        <button class="quantity-btn minus">-</button>
+                                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                        <button class="quantity-btn plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-id="8" data-name="Chocolate Milkshake" data-price="4.99">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-category="drinks">
+                            <div class="item-img">
+                                <img src="images/soft.jpg" alt="Soft Drink">
+                            </div>
+                            <div class="item-content">
+                                <h3>Soft Drink</h3>
+                                <p>Your choice of cola, lemon-lime, or orange soda</p>
+                                <div class="item-footer">
+                                    <span class="price">$2.49</span>
+                                    <div class="quantity-controls">
+                                        <button class="quantity-btn minus">-</button>
+                                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                        <button class="quantity-btn plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-id="9" data-name="Soft Drink" data-price="2.49">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart Section -->
+                <div class="cart-section">
+    <div class="cart-container">
+        <div class="cart-header">
+            <h2>Your <span>Order</span></h2>
+            <button class="clear-cart">Clear All</button>
+        </div>
+        
+        <div class="cart-items">
+            <!-- Cart items will be added here dynamically -->
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+                <p class="small">Add items to get started</p>
+            </div>
+        </div>
+        
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal:</span>
+                <span class="subtotal">$0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Tax (8%):</span>
+                <span class="tax">$0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Delivery Fee:</span>
+                <span class="delivery-fee">$2.99</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total Amount:</span>
+                <span class="total-price">$0.00</span>
+            </div>
+        </div>
+        
+        <div class="promo-code">
+            <input type="text" placeholder="Enter Promo Code">
+            <button>Apply</button>
+        </div>
+        
+        <button class="checkout-btn" disabled>Proceed to Checkout</button>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkout-modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Complete Your Order</h2>
+        
+        <div class="checkout-form">
+            <div class="form-section">
+                <h3>Delivery Information</h3>
+                <div class="form-group">
+                    <label for="name">Full Name <span style="color: var(--primary-color);">*</span></label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number <span style="color: var(--primary-color);">*</span></label>
+                    <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
+                    <label for="address">Delivery Address <span style="color: var(--primary-color);">*</span></label>
+                    <input type="text" id="address" placeholder="Enter your street address" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City <span style="color: var(--primary-color);">*</span></label>
+                        <input type="text" id="city" placeholder="Enter your city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">ZIP Code <span style="color: var(--primary-color);">*</span></label>
+                        <input type="text" id="zip" placeholder="Enter your ZIP code" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="instructions">Delivery Instructions</label>
+                    <input type="text" id="instructions" placeholder="Any special instructions for delivery">
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3>Payment Method</h3>
+                <div class="payment-options">
+                    <div class="payment-option">
+                        <input type="radio" id="credit-card" name="payment" checked>
+                        <label for="credit-card">Credit Card</label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" id="paypal" name="payment">
+                        <label for="paypal">PayPal</label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" id="cash" name="payment">
+                        <label for="cash">Cash on Delivery</label>
+                    </div>
+                </div>
+                
+                <div id="credit-card-details">
+                    <div class="form-group">
+                        <label for="card-number">Card Number <span style="color: var(--primary-color);">*</span></label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                    </div>
+                    <div class="form-group">
+                        <label for="card-name">Name on Card <span style="color: var(--primary-color);">*</span></label>
+                        <input type="text" id="card-name" placeholder="Enter the name on your card">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry">Expiry Date <span style="color: var(--primary-color);">*</span></label>
+                            <input type="text" id="expiry" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV <span style="color: var(--primary-color);">*</span></label>
+                            <input type="text" id="cvv" placeholder="123">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-items">
+                    <!-- Order summary will be populated dynamically -->
+                </div>
+                <div class="summary-total">
+                    <span>Total Amount:</span>
+                    <span class="modal-total">$0.00</span>
+                </div>
+            </div>
+            
+            <button type="submit" class="place-order-btn">Place Order</button>
+        </div>
+    </div>
+</div>
+
+    <!-- Order Confirmation Modal -->
+    <div class="modal" id="confirmation-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="confirmation-content">
+                <i class="fas fa-check-circle"></i>
+                <h2>Order Placed Successfully!</h2>
+                <p>Your order has been received and is being processed.</p>
+                <p class="order-number">Order #: <span id="order-number">GB12345</span></p>
+                <p>Estimated delivery time: 30-45 minutes</p>
+                <button class="back-to-home">Back to Home</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Golden<span>Bite</span></h2>
+                    <p>Delicious food for every taste</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#menu">Menu</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#specials">Specials</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Subscribe</h3>
+                    <p>Subscribe to our newsletter for special offers and updates</p>
+                    <form>
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 GoldenBite. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="order.js"></script>
+</body>
+</html>
+
